@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  * Code in Web Server => Input:HttpRequest, Output: HttpResponse
  * JEE with Servlets
  * 
- * Web Server responds with Http Response
+ * Web Server responds with Http Response.
  */
 
 //Java Platform, Enterprise Edition (Java EE) JEE6
