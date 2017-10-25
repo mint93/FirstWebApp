@@ -7,6 +7,6 @@
 <title>Hello from JSP</title>
 </head>
 <body>
-	Hello World from JSP
+	Hello World from JSP ${name}
 </body>
 </html>
