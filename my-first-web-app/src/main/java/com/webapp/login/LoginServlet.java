@@ -1,4 +1,4 @@
-package com.webapp;
+package com.webapp.login;
 
 import java.io.IOException;
 
@@ -10,8 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/login.do")
 public class LoginServlet extends HttpServlet {
-	private UserValidationServise userValidationServise = new UserValidationServise();
-	
+	private LoginService loginService = new LoginService();
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -24,13 +23,12 @@ public class LoginServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String password = request.getParameter("pass");
 		
-		boolean isUserValid = userValidationServise.isUserValid(name, password);
+		boolean isUserValid = loginService.isUserValid(name, password);
 		
 		if(isUserValid) {
-			request.setAttribute("name", request.getParameter("name"));
-			request.setAttribute("pass", request.getParameter("pass"));
-			request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
+			response.sendRedirect("/todo.do");
 		}else {
+			request.setAttribute("errorMessage", "Invalid user name");
 			request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
 		}
 	}

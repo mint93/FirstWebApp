@@ -1,6 +1,6 @@
-package com.webapp;
+package com.webapp.login;
 
-public class UserValidationServise {
+public class LoginService{
 	public boolean isUserValid(String user, String pass) {
 		if (user.equals("ja") && pass.equals("bob")) {
 			return true;
