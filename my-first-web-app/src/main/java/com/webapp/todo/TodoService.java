@@ -15,4 +15,12 @@ public class TodoService {
 	public List<Todo> retrieveTodos() {
 		return todos;
 	}
+	
+	public void addTodo(Todo todo) {
+		todos.add(todo);
+	}
+	
+	public void deleteTodo(String id) {
+		todos.removeIf(obj -> obj.getId() == Long.valueOf(id).longValue());
+	}
 }
