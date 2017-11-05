@@ -27,7 +27,7 @@
 
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="#">Home</a></li>
-			<li><a href="/todo.do">Todos</a></li>
+			<li><a href="/list-todo.do">Todos</a></li>
 		</ul>
 
 		<ul class="nav navbar-nav navbar-right">
@@ -46,7 +46,7 @@
 			<li>${todo.getName()} &nbsp; &nbsp; <a href="/delete-todo.do?todo=${todo.getId()}">Delete</a></li>
 			</c:forEach>
 	</ol>
-	<form action="/todo.do" method="post">
+	<form action="/add-todo.do" method="post">
 		<input type="text" name="todo"/> <input type="submit" value="add"/>
 	</form>
 	</div>
