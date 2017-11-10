@@ -46,9 +46,9 @@
 			<li>${todo.getName()} &nbsp; &nbsp; <a href="/delete-todo.do?todo=${todo.getId()}">Delete</a></li>
 			</c:forEach>
 	</ol>
-	<form action="/add-todo.do" method="post">
-		<input type="text" name="todo"/> <input type="submit" value="add"/>
-	</form>
+	
+	<a href="/add-todo.do">Add New Todo</a>
+	
 	</div>
 
 	<footer class="footer">
