@@ -40,7 +40,9 @@
 	
 	Your new todo:
 	<form action="/add-todo.do" method="post">
-		<input type="text" name="todo"/> <input type="submit" value="add"/>
+		Description<input type="text" name="todo"/> <br/>
+		Category<input type="text" name="category"/> <br/>
+		<input type="submit" value="add"/>
 	</form>
 	</div>
 

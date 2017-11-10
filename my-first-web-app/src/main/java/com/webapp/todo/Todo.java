@@ -4,18 +4,20 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Todo {
 	private String name;
+	private String category;
 	static AtomicInteger nextId = new AtomicInteger();
-    private final long ID;
+	private final long ID;
 
-	public Todo(String name) {
+	public Todo(String name, String category) {
 		super();
 		this.name = name;
+		this.category = category;
 		ID = nextId.incrementAndGet();
 	}
-	
+
 	@Override
 	public String toString() {
-		return String.format("Todo [name=%s]", name);
+		return String.format("Todo [name=%s, category=%s, ID=%s]", name, category, ID);
 	}
 
 	public String getName() {
@@ -24,6 +26,14 @@ public class Todo {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 	public long getId() {
@@ -58,7 +68,4 @@ public class Todo {
 		return true;
 	}
 
-	
-	
-	
 }

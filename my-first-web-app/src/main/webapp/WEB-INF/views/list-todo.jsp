@@ -43,7 +43,7 @@
 	Your todos are:
 	<ol>
 		<c:forEach items="${todos}" var="todo">
-			<li>${todo.getName()} &nbsp; &nbsp; <a href="/delete-todo.do?todo=${todo.getId()}">Delete</a></li>
+			<li>${todo.getName()} &nbsp; ${todo.getCategory()} &nbsp; <a href="/delete-todo.do?todo=${todo.getId()}">Delete</a></li>
 			</c:forEach>
 	</ol>
 	
